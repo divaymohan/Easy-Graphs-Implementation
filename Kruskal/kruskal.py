@@ -19,6 +19,7 @@ def union(x, y):
 
 
 def kruskal(pair, edges, vertex):
+    #count = 0
     # sort the edges with respect to their weights in increasing order
     pair1 = sorted(pair, reverse=True)
     # initializing minimum cost to 0
@@ -30,6 +31,7 @@ def kruskal(pair, edges, vertex):
         x = t[1][0]
         y = t[1][1]
         if(root(x) != root(y)):
+            #count = count + 1
             minimumCost = minimumCost+w
             print("edge:({} {})".format(x, y))
             union(x, y)
